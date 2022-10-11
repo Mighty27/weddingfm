@@ -84,8 +84,7 @@
 
     // Music Player
     var music = document.getElementById('myAudio');
-    var playerMusic = document.getElementById('myPlayer');
-
+    
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.music-player').fadeOut('fast');

@@ -32,15 +32,15 @@
 
     <!-- Audio Play Start-->
 
-    <audio autoplay loop id="myAudio">
-        <source src="music/Beautiful In White - Shane Filan.mp3" type="audio/mpeg">
+    <audio loop id="myAudio">
+        <source src="music/Beautiful In White - Shane Filan.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
     <!-- Audio Play End -->
 
     <!-- Audio Play Button Start -->
-    <button onclick="iconChange()" id="myPlayer" class="btn btn-outline-dark music-player 1"><i id="icons" class="fa-solid fa-pause"></i></button>
+    <button onclick="iconChange()" id="myPlayer" class="btn btn-outline-dark music-player 1"><i id="icons" class="fa-solid fa-play"></i></button>
     <!-- Audio Play Button End -->
 
     <!-- Navbar Start -->
@@ -473,12 +473,21 @@
             if (div.classList.contains('fa-pause')) {
                 div.classList.remove("fa-pause");
                 div.classList.add("fa-play");
-
             } else if (div.classList.contains('fa-play')) {
                 div.classList.remove("fa-play");
                 div.classList.add("fa-pause");
             }
         }
+    </script>
+
+    <script>
+        const music = document.getElementById('myAudio');
+        $(document).ready(function(){
+         // set time out 5 sec
+            setTimeout(function(){
+               $('.music-player').trigger('click');
+           }, 4000);
+       });
     </script>
 </body>
 
