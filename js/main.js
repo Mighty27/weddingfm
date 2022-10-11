@@ -84,7 +84,8 @@
 
     // Music Player
     var music = document.getElementById('myAudio');
-    
+    let div = document.getElementById('icons');
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.music-player').fadeOut('fast');
@@ -93,14 +94,14 @@
         }
     });
 
-    $('.music-player').click(function () {
-        if (music.paused && music.currentTime >= 0 && !music.ended) {
-            music.play();
-        } else {
-            music.pause();
-        }
-        return false;
-    });
+    // $('.music-player').click(function () {
+    //     if (music.paused && music.currentTime >= 0 && !music.ended) {
+    //         music.play();
+    //     } else {
+    //         music.pause();
+    //     }
+    //     return false;
+    // });
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({
